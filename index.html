@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍해 | 자기소개</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1 class="hero__name">홍해</h1>
+    <p class="hero__tagline">새로운 것을 배우고 만드는 걸 좋아하는 개발자입니다.</p>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="다크 모드 전환">🌙</button>
+  </header>
+
+  <main>
+    <section class="section reveal" id="about">
+      <h2 class="section__title">소개</h2>
+      <p>
+        안녕하세요, 홍해입니다. 웹으로 생각을 표현하는 일에 관심이 많고,
+        작은 것부터 직접 만들어 보며 배우고 있습니다.
+        이 페이지는 순수 HTML, CSS, JavaScript만으로 만들었습니다.
+      </p>
+    </section>
+
+    <section class="section reveal" id="favorites">
+      <h2 class="section__title">좋아하는 것 3가지</h2>
+      <ul class="cards">
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">☕</span>
+          <h3 class="card__title">커피</h3>
+          <p class="card__desc">아침을 시작하는 따뜻한 한 잔.</p>
+        </li>
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">📚</span>
+          <h3 class="card__title">독서</h3>
+          <p class="card__desc">새로운 관점을 얻는 가장 좋은 방법.</p>
+        </li>
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">💻</span>
+          <h3 class="card__title">코딩</h3>
+          <p class="card__desc">아이디어를 직접 만들어 보는 즐거움.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> 홍해. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
