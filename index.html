@@ -10,6 +10,11 @@
   <header class="hero">
     <h1 class="hero__name">홍해</h1>
     <p class="hero__tagline">새로운 것을 배우고 만드는 걸 좋아하는 개발자입니다.</p>
+    <nav class="hero__nav" aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#favorites">좋아하는 것</a>
+      <a href="#contact">연락처</a>
+    </nav>
     <button type="button" id="theme-toggle" class="theme-toggle" aria-label="다크 모드 전환">🌙</button>
   </header>
 
@@ -45,7 +50,8 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
+    <p class="footer__contact">연락처: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
     <p>&copy; <span id="year"></span> 홍해. All rights reserved.</p>
   </footer>
 

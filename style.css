@@ -6,6 +6,7 @@
   --accent: #c4b5fd;
   --border: #f3e8f4;
   --hero-from: #fbcfe8;
+  --hero-mid: #ddd6fe;
   --hero-to: #e0e7ff;
 }
 
@@ -17,6 +18,7 @@
   --accent: #c4b5fd;
   --border: #403a50;
   --hero-from: #4c3a5c;
+  --hero-mid: #3b3463;
   --hero-to: #2c3550;
 }
 
@@ -39,7 +41,7 @@ body {
   position: relative;
   text-align: center;
   padding: 6rem 1rem 4rem;
-  background: linear-gradient(180deg, var(--hero-from), var(--hero-to));
+  background: linear-gradient(135deg, var(--hero-from), var(--hero-mid), var(--hero-to));
 }
 
 .hero__name {
@@ -51,6 +53,28 @@ body {
   margin-top: 0.5rem;
   color: var(--muted);
   font-size: 1.1rem;
+}
+
+.hero__nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero__nav a {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.hero__nav a:hover {
+  background: var(--accent);
 }
 
 .hero__tagline.is-typing::after {
@@ -151,6 +175,14 @@ main {
   color: var(--muted);
   font-size: 0.9rem;
   border-top: 1px solid var(--border);
+}
+
+.footer__contact {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: var(--text);
 }
 
 /* 스크롤 등장 효과 */
