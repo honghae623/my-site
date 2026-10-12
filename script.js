@@ -26,6 +26,26 @@ toggle.addEventListener("click", () => {
   } catch (e) {}
 });
 
+// 한 줄 소개 타이핑 효과
+const tagline = document.querySelector(".hero__tagline");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!reduceMotion) {
+  const fullText = tagline.textContent;
+  tagline.setAttribute("aria-label", fullText);
+  tagline.textContent = "";
+  tagline.classList.add("is-typing");
+
+  let i = 0;
+  const timer = setInterval(() => {
+    tagline.textContent = fullText.slice(0, ++i);
+    if (i >= fullText.length) {
+      clearInterval(timer);
+      tagline.classList.remove("is-typing");
+    }
+  }, 70);
+}
+
 // 스크롤 시 섹션 등장 효과
 const observer = new IntersectionObserver(
   (entries) => {
