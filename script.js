@@ -15,8 +15,8 @@ try {
   savedTheme = localStorage.getItem("theme");
 } catch (e) {}
 
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+// 레트로 감성은 검은 배경이 기본
+applyTheme(savedTheme || "dark");
 
 toggle.addEventListener("click", () => {
   const next = root.dataset.theme === "dark" ? "light" : "dark";
@@ -60,3 +60,34 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+// 방문자 카운터 (이 브라우저의 방문 횟수)
+let visits = 1;
+try {
+  visits = Number(localStorage.getItem("visits") || 0) + 1;
+  localStorage.setItem("visits", visits);
+} catch (e) {}
+document.getElementById("visit-count").textContent = String(visits).padStart(6, "0");
+
+// 마우스 반짝이 꼬리
+if (!reduceMotion) {
+  const sparkles = ["✦", "✧", "★", "☆", "✶"];
+  const colors = ["#ff00ff", "#00ffff", "#39ff14", "#ffff00"];
+  let last = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    const now = Date.now();
+    if (now - last < 40) return;
+    last = now;
+
+    const star = document.createElement("span");
+    star.className = "trail";
+    star.setAttribute("aria-hidden", "true");
+    star.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
+    star.style.color = colors[Math.floor(Math.random() * colors.length)];
+    star.style.left = `${e.clientX}px`;
+    star.style.top = `${e.clientY}px`;
+    document.body.appendChild(star);
+    star.addEventListener("animationend", () => star.remove());
+  });
+}

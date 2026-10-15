@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홍해 | 자기소개</title>
+  <title>★ 홍해의 홈페이지 ★</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.39.3/dist/galmuri.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="marquee">
+    <p class="marquee__text">★☆★ 홍해의 홈페이지에 오신 것을 환영합니다!!! ★☆★ 방명록 대신 이메일 환영 ★☆★ 즐겨찾기 추가는 Ctrl+D ★☆★</p>
+  </div>
+
   <header class="hero">
-    <h1 class="hero__name">홍해</h1>
+    <p class="hero__welcome blink">~*~ WELCOME TO MY HOMEPAGE ~*~</p>
+    <h1 class="hero__name rainbow">홍해</h1>
     <p class="hero__tagline">새로운 것을 배우고 만드는 걸 좋아하는 개발자입니다.</p>
     <nav class="hero__nav" aria-label="주요 메뉴">
       <a href="#about">소개</a>
@@ -19,8 +25,10 @@
   </header>
 
   <main>
+    <p class="construction"><span>🚧 이 홈페이지는 공사중입니다! 🚧</span></p>
+
     <section class="section reveal" id="about">
-      <h2 class="section__title">소개</h2>
+      <h2 class="section__title sparkle">✦ 소개 ✦</h2>
       <p>
         안녕하세요, 홍해입니다. 웹으로 생각을 표현하는 일에 관심이 많고,
         작은 것부터 직접 만들어 보며 배우고 있습니다.
@@ -29,7 +37,7 @@
     </section>
 
     <section class="section reveal" id="favorites">
-      <h2 class="section__title">좋아하는 것 3가지</h2>
+      <h2 class="section__title sparkle">✦ 좋아하는 것 3가지 ✦ <span class="badge-new blink">NEW!</span></h2>
       <ul class="cards">
         <li class="card">
           <span class="card__icon" aria-hidden="true">☕</span>
@@ -51,7 +59,9 @@
   </main>
 
   <footer class="footer" id="contact">
-    <p class="footer__contact">연락처: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <p class="counter">이 브라우저로 <span id="visit-count" class="counter__digits">000001</span>번째 방문하셨습니다!</p>
+    <p class="footer__contact">✉ 연락처: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <p class="footer__best">800×600 해상도, 넷스케이프에 최적화되어 있습니다 ;)</p>
     <p>&copy; <span id="year"></span> 홍해. All rights reserved.</p>
   </footer>
 
